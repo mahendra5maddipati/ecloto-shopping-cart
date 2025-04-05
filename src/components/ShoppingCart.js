@@ -1,11 +1,11 @@
 import React from "react";
+import {CartContainer} from "../styles/styles";
 
 const GIFT_ID = 99;
 
 const ShoppingCart = ({cart, updateCart}) => {
     return (
-        <div>
-
+        <CartContainer>
             <h2>Cart Items</h2>
             {cart.length === 0 ? (<p>Your cart is empty</p>) : (
                 cart.map((i)=>(<div key={i.id}>
@@ -26,7 +26,7 @@ const ShoppingCart = ({cart, updateCart}) => {
                 </div>
                     ))
             )}
-        </div>
+        </CartContainer>
     )
 }
 
